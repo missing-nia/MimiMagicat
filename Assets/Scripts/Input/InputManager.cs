@@ -111,13 +111,13 @@ namespace Magicat.Input
             _input = GetComponent<PlayerInput>();
 
             _aButtonGameplay = _input.actions["A Button [Gameplay]"];
-            _bButtonGameplay = _input.actions["B Buttons [Gameplay]"];
+            _bButtonGameplay = _input.actions["B Button [Gameplay]"];
             _startGameplay = _input.actions["Start [Gameplay]"];
             _selectGameplay = _input.actions["Select [Gameplay]"];
             _dpadGameplay = _input.actions["Dpad [Gameplay]"];
 
             _aButtonMenu = _input.actions["A Button [Menu]"];
-            _bButtonMenu = _input.actions["B Buttons [Menu]"];
+            _bButtonMenu = _input.actions["B Button [Menu]"];
             _startMenu = _input.actions["Start [Menu]"];
             _selectMenu = _input.actions["Select [Menu]"];
             _dpadMenu = _input.actions["Dpad [Menu]"];
