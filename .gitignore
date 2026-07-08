@@ -77,3 +77,7 @@ crashlytics-build.properties
 # Sprites
 /[Aa]ssets/[Ss]prites/
 /[Aa]ssets/[Aa]udio/
+Assets/mimi.tiled-project
+Assets/mimi.tiled-project.meta
+Assets/mimi.tiled-session
+Assets/mimi.tiled-session.meta
