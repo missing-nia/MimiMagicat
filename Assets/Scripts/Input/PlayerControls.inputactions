@@ -7,7 +7,7 @@
             "id": "e6ad7f4a-8a5a-4299-aa2f-ad5cab479c5e",
             "actions": [
                 {
-                    "name": "A Button",
+                    "name": "A Button [Gameplay]",
                     "type": "Button",
                     "id": "985ad013-c300-4988-b109-8c27af9e345b",
                     "expectedControlType": "",
@@ -16,7 +16,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "B Button",
+                    "name": "B Button  [Gameplay]",
                     "type": "Button",
                     "id": "754f738d-89e1-4499-9b7b-33e47fffa784",
                     "expectedControlType": "",
@@ -25,7 +25,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Start",
+                    "name": "Start  [Gameplay]",
                     "type": "Button",
                     "id": "e92d46ac-745d-4422-ba23-d967946afdbf",
                     "expectedControlType": "",
@@ -34,7 +34,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Select",
+                    "name": "Select  [Gameplay]",
                     "type": "Button",
                     "id": "1ed14de8-388f-4c42-84ea-bd1199a42384",
                     "expectedControlType": "",
@@ -43,7 +43,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dpad",
+                    "name": "Dpad  [Gameplay]",
                     "type": "Value",
                     "id": "cc365a15-b97b-4c4e-b1e8-ea222780550a",
                     "expectedControlType": "Vector2",
@@ -60,7 +60,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "B Button",
+                    "action": "B Button  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -71,7 +71,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "B Button",
+                    "action": "B Button  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -82,7 +82,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "B Button",
+                    "action": "B Button  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -93,7 +93,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "B Button",
+                    "action": "B Button  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -104,7 +104,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Select",
+                    "action": "Select  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -115,7 +115,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Select",
+                    "action": "Select  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -126,7 +126,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Select",
+                    "action": "Select  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -137,7 +137,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Select",
+                    "action": "Select  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -148,7 +148,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Select",
+                    "action": "Select  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -159,7 +159,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "A Button",
+                    "action": "A Button [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -170,7 +170,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "A Button",
+                    "action": "A Button [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -181,7 +181,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "A Button",
+                    "action": "A Button [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -192,7 +192,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "A Button",
+                    "action": "A Button [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -203,7 +203,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "A Button",
+                    "action": "A Button [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -214,7 +214,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -225,7 +225,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -236,7 +236,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -247,7 +247,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -258,7 +258,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -269,7 +269,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -280,7 +280,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -291,7 +291,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -302,7 +302,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -313,7 +313,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -324,7 +324,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -335,7 +335,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -346,7 +346,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -357,7 +357,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -368,7 +368,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -379,7 +379,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -390,7 +390,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -401,7 +401,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -412,7 +412,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -423,7 +423,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -434,7 +434,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -445,7 +445,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -456,7 +456,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -467,7 +467,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -478,7 +478,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -489,7 +489,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Start",
+                    "action": "Start  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -500,7 +500,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Start",
+                    "action": "Start  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -511,7 +511,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Start",
+                    "action": "Start  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -522,7 +522,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Start",
+                    "action": "Start  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -533,7 +533,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Start",
+                    "action": "Start  [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -544,7 +544,7 @@
             "id": "32b71044-a9fc-4227-a806-0a738d1e0aae",
             "actions": [
                 {
-                    "name": "A Button",
+                    "name": "A Button [Menu]",
                     "type": "Button",
                     "id": "3a8b22f3-dff6-48a6-a4a8-32d8431a69d4",
                     "expectedControlType": "",
@@ -553,7 +553,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "B Button",
+                    "name": "B Button [Menu]",
                     "type": "Button",
                     "id": "3e2d7762-3831-44b9-a40b-c9c73a379daa",
                     "expectedControlType": "",
@@ -562,7 +562,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Start",
+                    "name": "Start [Menu]",
                     "type": "Button",
                     "id": "be329d6e-81f1-42e5-ad0b-6af2b3bdecae",
                     "expectedControlType": "",
@@ -571,7 +571,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Select",
+                    "name": "Select [Menu]",
                     "type": "Button",
                     "id": "79743b02-00b9-4494-938c-36c6d4a3d960",
                     "expectedControlType": "",
@@ -580,7 +580,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dpad",
+                    "name": "Dpad [Menu]",
                     "type": "Value",
                     "id": "c343591b-00d0-4acd-b4bc-9fb8cc2bb9c7",
                     "expectedControlType": "Vector2",
@@ -597,7 +597,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "B Button",
+                    "action": "B Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -608,7 +608,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "B Button",
+                    "action": "B Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -619,7 +619,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "B Button",
+                    "action": "B Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -630,7 +630,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "B Button",
+                    "action": "B Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -641,7 +641,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Select",
+                    "action": "Select [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -652,7 +652,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Select",
+                    "action": "Select [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -663,7 +663,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Select",
+                    "action": "Select [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -674,7 +674,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Select",
+                    "action": "Select [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -685,7 +685,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Select",
+                    "action": "Select [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -696,7 +696,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "A Button",
+                    "action": "A Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -707,7 +707,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "A Button",
+                    "action": "A Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -718,7 +718,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "A Button",
+                    "action": "A Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -729,7 +729,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "A Button",
+                    "action": "A Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -740,7 +740,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "A Button",
+                    "action": "A Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -751,7 +751,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -762,7 +762,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -773,7 +773,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -784,7 +784,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -795,7 +795,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -806,7 +806,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -817,7 +817,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -828,7 +828,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -839,7 +839,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -850,7 +850,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -861,7 +861,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -872,7 +872,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -883,7 +883,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -894,7 +894,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -905,7 +905,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -916,7 +916,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -927,7 +927,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -938,7 +938,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -949,7 +949,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -960,7 +960,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -971,7 +971,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -982,7 +982,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -993,7 +993,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1004,7 +1004,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1015,7 +1015,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Dpad",
+                    "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1026,7 +1026,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Start",
+                    "action": "Start [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1037,7 +1037,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Playstation",
-                    "action": "Start",
+                    "action": "Start [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1048,7 +1048,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Switch",
-                    "action": "Start",
+                    "action": "Start [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1059,7 +1059,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "Start",
+                    "action": "Start [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1070,7 +1070,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad [Generic]",
-                    "action": "Start",
+                    "action": "Start [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

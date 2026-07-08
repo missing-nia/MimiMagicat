@@ -37,7 +37,8 @@ namespace Magicat.Helpers
     public enum ActionMaps : byte
     {
         Gameplay = 0,
-        Menu = 1
+        Menu = 1,
+        Console = 2
     }
 
     /// <summary>
