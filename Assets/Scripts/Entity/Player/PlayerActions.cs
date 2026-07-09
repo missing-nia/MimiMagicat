@@ -112,17 +112,29 @@ namespace Magicat.Entity.Player
                 // Read the movement vector (L-analog or WASD)
                 var direction = _dpadAction.ReadValue<Vector2>();
 
-                // Flip sprite
-                // Don't change if 0 (neutral)
-                if (direction.x > 0.0f)
+                // Handle anim states
+                // Only update facing if a singular direction is held
+                if (direction.y == 0)
                 {
-                    // Moving right (default)
-                    _player.Sprite.flipX = false;
+                    if (direction.x > 0)
+                    {
+                        _player.Anim.SetTrigger("onMoveRight");
+                    }
+                    else if (direction.x < 0)
+                    {
+                        _player.Anim.SetTrigger("onMoveLeft");
+                    }
                 }
-                else if (direction.x < 0.0f)
+                else if (direction.x == 0)
                 {
-                    // Moving left
-                    _player.Sprite.flipX = true;
+                    if (direction.y > 0)
+                    {
+                        _player.Anim.SetTrigger("onMoveUp");
+                    }
+                    else if (direction.y < 0)
+                    {
+                        _player.Anim.SetTrigger("onMoveDown");
+                    }
                 }
 
                 // Basic movement (fix this later)
@@ -152,6 +164,9 @@ namespace Magicat.Entity.Player
         public void StopMoving()
         {
             _movement.SetVelocity(Vector3.zero);
+            
+            // Stop movement anim
+            _player.Anim.SetTrigger("onStopMoving");
         }
 
         public Vector2 GetMovementDirection()
