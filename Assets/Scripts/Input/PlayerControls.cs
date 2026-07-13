@@ -102,7 +102,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""B Button  [Gameplay]"",
+                    ""name"": ""B Button [Gameplay]"",
                     ""type"": ""Button"",
                     ""id"": ""754f738d-89e1-4499-9b7b-33e47fffa784"",
                     ""expectedControlType"": """",
@@ -111,7 +111,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Start  [Gameplay]"",
+                    ""name"": ""Start [Gameplay]"",
                     ""type"": ""Button"",
                     ""id"": ""e92d46ac-745d-4422-ba23-d967946afdbf"",
                     ""expectedControlType"": """",
@@ -120,7 +120,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Select  [Gameplay]"",
+                    ""name"": ""Select [Gameplay]"",
                     ""type"": ""Button"",
                     ""id"": ""1ed14de8-388f-4c42-84ea-bd1199a42384"",
                     ""expectedControlType"": """",
@@ -129,7 +129,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Dpad  [Gameplay]"",
+                    ""name"": ""Dpad [Gameplay]"",
                     ""type"": ""Value"",
                     ""id"": ""cc365a15-b97b-4c4e-b1e8-ea222780550a"",
                     ""expectedControlType"": ""Vector2"",
@@ -146,7 +146,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""B Button  [Gameplay]"",
+                    ""action"": ""B Button [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -157,7 +157,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""B Button  [Gameplay]"",
+                    ""action"": ""B Button [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -168,7 +168,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""B Button  [Gameplay]"",
+                    ""action"": ""B Button [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -179,7 +179,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""B Button  [Gameplay]"",
+                    ""action"": ""B Button [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -189,8 +189,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Select  [Gameplay]"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Select [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -201,7 +201,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""Select  [Gameplay]"",
+                    ""action"": ""Select [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -212,7 +212,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""Select  [Gameplay]"",
+                    ""action"": ""Select [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -223,7 +223,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""Select  [Gameplay]"",
+                    ""action"": ""Select [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -234,7 +234,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""Select  [Gameplay]"",
+                    ""action"": ""Select [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -244,7 +244,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""A Button [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -300,7 +300,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -310,8 +310,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -321,8 +321,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -332,8 +332,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -343,8 +343,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -355,7 +355,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -366,7 +366,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -377,7 +377,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -388,7 +388,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -399,7 +399,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -410,7 +410,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -421,7 +421,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -432,7 +432,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -443,7 +443,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -454,7 +454,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -465,7 +465,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -476,7 +476,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -487,7 +487,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -498,7 +498,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -509,7 +509,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -520,7 +520,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -531,7 +531,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -542,7 +542,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -553,7 +553,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -564,7 +564,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""Dpad  [Gameplay]"",
+                    ""action"": ""Dpad [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -574,8 +574,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Start  [Gameplay]"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Start [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -586,7 +586,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Playstation"",
-                    ""action"": ""Start  [Gameplay]"",
+                    ""action"": ""Start [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -597,7 +597,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Switch"",
-                    ""action"": ""Start  [Gameplay]"",
+                    ""action"": ""Start [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -608,7 +608,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
-                    ""action"": ""Start  [Gameplay]"",
+                    ""action"": ""Start [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -619,7 +619,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad [Generic]"",
-                    ""action"": ""Start  [Gameplay]"",
+                    ""action"": ""Start [Gameplay]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -726,7 +726,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Select [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -781,7 +781,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""A Button [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -847,7 +847,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Dpad [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -858,7 +858,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Dpad [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -869,7 +869,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Dpad [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -880,7 +880,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Dpad [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -1111,7 +1111,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Start [Menu]"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1210,7 +1210,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/backquote"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Console"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1221,7 +1221,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""PreviousSubmission"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1232,7 +1232,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""NextSubmission"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1254,7 +1254,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""CaretPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -1265,7 +1265,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""CaretPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -1275,8 +1275,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""KeyboardMouse"",
-            ""bindingGroup"": ""KeyboardMouse"",
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
@@ -1285,7 +1285,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": false,
+                    ""isOptional"": true,
                     ""isOR"": false
                 }
             ]
@@ -1339,10 +1339,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // Gameplay
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_AButtonGameplay = m_Gameplay.FindAction("A Button [Gameplay]", throwIfNotFound: true);
-        m_Gameplay_BButtonGameplay = m_Gameplay.FindAction("B Button  [Gameplay]", throwIfNotFound: true);
-        m_Gameplay_StartGameplay = m_Gameplay.FindAction("Start  [Gameplay]", throwIfNotFound: true);
-        m_Gameplay_SelectGameplay = m_Gameplay.FindAction("Select  [Gameplay]", throwIfNotFound: true);
-        m_Gameplay_DpadGameplay = m_Gameplay.FindAction("Dpad  [Gameplay]", throwIfNotFound: true);
+        m_Gameplay_BButtonGameplay = m_Gameplay.FindAction("B Button [Gameplay]", throwIfNotFound: true);
+        m_Gameplay_StartGameplay = m_Gameplay.FindAction("Start [Gameplay]", throwIfNotFound: true);
+        m_Gameplay_SelectGameplay = m_Gameplay.FindAction("Select [Gameplay]", throwIfNotFound: true);
+        m_Gameplay_DpadGameplay = m_Gameplay.FindAction("Dpad [Gameplay]", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_AButtonMenu = m_Menu.FindAction("A Button [Menu]", throwIfNotFound: true);
@@ -1843,17 +1843,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="ConsoleActions" /> instance referencing this action map.
     /// </summary>
     public ConsoleActions @Console => new ConsoleActions(this);
-    private int m_KeyboardMouseSchemeIndex = -1;
+    private int m_KeyboardSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
     /// </summary>
     /// <seealso cref="UnityEngine.InputSystem.InputControlScheme" />
-    public InputControlScheme KeyboardMouseScheme
+    public InputControlScheme KeyboardScheme
     {
         get
         {
-            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardMouse");
-            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
         }
     }
     private int m_PlaystationSchemeIndex = -1;
@@ -1923,28 +1923,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAButtonGameplay(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "B Button  [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "B Button [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnBButtonGameplay(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Start  [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Start [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnStartGameplay(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Select  [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Select [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSelectGameplay(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Dpad  [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Dpad [Gameplay]" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />

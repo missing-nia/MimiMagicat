@@ -103,7 +103,7 @@
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Select [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -158,7 +158,7 @@
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "A Button [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -224,7 +224,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -235,7 +235,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -246,7 +246,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -257,7 +257,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -488,7 +488,7 @@
                     "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Start [Gameplay]",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -640,7 +640,7 @@
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Select [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -695,7 +695,7 @@
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "A Button [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -761,7 +761,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -772,7 +772,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -783,7 +783,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -794,7 +794,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Dpad [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1025,7 +1025,7 @@
                     "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Start [Menu]",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1124,7 +1124,7 @@
                     "path": "<Keyboard>/backquote",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "Console",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1135,7 +1135,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "PreviousSubmission",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1146,7 +1146,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "NextSubmission",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1168,7 +1168,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "CaretPosition",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1179,7 +1179,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
+                    "groups": "Keyboard",
                     "action": "CaretPosition",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1189,8 +1189,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "KeyboardMouse",
-            "bindingGroup": "KeyboardMouse",
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
@@ -1199,7 +1199,7 @@
                 },
                 {
                     "devicePath": "<Mouse>",
-                    "isOptional": false,
+                    "isOptional": true,
                     "isOR": false
                 }
             ]
