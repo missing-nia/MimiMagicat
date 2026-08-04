@@ -1,9 +1,13 @@
+using Magicat.Helpers;
 using UnityEngine;
 
 namespace Magicat.Entity.Player
 {
     public class Player : Entity
     {
+        [SerializeField]
+        private GameObject _rodObj;
+
         // TODO: readd playerdata structure. This is temp to test movement!!
         public float speed = 3.0f;
 
@@ -19,5 +23,9 @@ namespace Magicat.Entity.Player
             _anim = GetComponent<Animator>();
         }
 
+        // TODO MOVE ROD LOGIC INTO ITS OWN CLASS?
+        public void UseRod(Directions dir)
+        {
+        }
     }
 }

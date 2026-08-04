@@ -1,5 +1,7 @@
 using Magicat.Helpers;
 using Magicat.Input;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +14,9 @@ namespace Magicat.Entity.Player
         [SerializeField]
         [Tooltip("The offset of the hitbox. This should be the center of the player!!")]
         private Vector3 _offset;
+        [SerializeField]
+        [Tooltip("How long the player should stand still for the rod animation when using the rod.")]
+        private float _rodAnimTime; 
 
         private InputAction _aButtonAction;
         private InputAction _bButtonAction;
@@ -23,8 +28,10 @@ namespace Magicat.Entity.Player
         private KinematicMovement _movement;
 
         private Vector2 _movementDirection;
+        private Directions _facingDirection;
 
         private bool _isMoving;
+        private bool _inAnim;
         private bool _initialized;
 
         // Start is called before the first frame update
@@ -32,6 +39,7 @@ namespace Magicat.Entity.Player
         {
             _player = GetComponent<Player>();
             _movement = GetComponent<KinematicMovement>();
+            _facingDirection = Directions.South; // TODO: Ensure player always spawns facing south!
 
             // Default value (dash up if no input has been pushed)
             _movementDirection = Vector2.up;
@@ -59,7 +67,9 @@ namespace Magicat.Entity.Player
             _dpadAction.Disable();
 
             // TODO: Other actions
+            _aButtonAction.performed -= UseRod;
             _aButtonAction.Disable();
+
             _bButtonAction.Disable();
             _startAction.Disable();
             _selectAction.Disable();
@@ -75,6 +85,12 @@ namespace Magicat.Entity.Player
                 return;
             }*/
 
+            // Don't move during anims
+            if (_inAnim)
+            {
+                return;
+            }
+
             UpdateMovement();
         }
 
@@ -89,7 +105,7 @@ namespace Magicat.Entity.Player
             _dpadAction.canceled += OnMove;
 
             _aButtonAction = InputManager.Instance.AButtonGameplay;
-            //_aButtonAction.performed +=
+            _aButtonAction.performed += UseRod;
             _aButtonAction.Enable();
 
             _bButtonAction = InputManager.Instance.BButtonGameplay;
@@ -103,6 +119,28 @@ namespace Magicat.Entity.Player
             _selectAction = InputManager.Instance.SelectGameplay;
             ///_selectAction.performed +=
             _selectAction.Enable();
+        }
+
+        /// <summary>
+        /// Function call for using the copy rod.
+        /// Rod will perform an animation and send out a 
+        /// targetted collision check in the facing direction
+        /// </summary>
+        private void UseRod(InputAction.CallbackContext context)
+        {
+            // Don't overlap anims
+            if(_inAnim)
+            {
+                return;
+            }
+
+            _player.Anim.SetInteger("Direction", ((int)_facingDirection));
+            _player.UseRod(_facingDirection);
+
+            // Stop the movement currently happening
+            StopMoving(false);
+            _inAnim = true;
+            StartCoroutine(RodAnimRoutine());
         }
 
         private void UpdateMovement()
@@ -119,10 +157,12 @@ namespace Magicat.Entity.Player
                     if (direction.x > 0)
                     {
                         _player.Anim.SetTrigger("onMoveRight");
+                        _facingDirection = Directions.East;
                     }
                     else if (direction.x < 0)
                     {
                         _player.Anim.SetTrigger("onMoveLeft");
+                        _facingDirection = Directions.West;
                     }
                 }
                 else if (direction.x == 0)
@@ -130,10 +170,12 @@ namespace Magicat.Entity.Player
                     if (direction.y > 0)
                     {
                         _player.Anim.SetTrigger("onMoveUp");
+                        _facingDirection = Directions.North;
                     }
                     else if (direction.y < 0)
                     {
                         _player.Anim.SetTrigger("onMoveDown");
+                        _facingDirection = Directions.South;
                     }
                 }
 
@@ -161,10 +203,28 @@ namespace Magicat.Entity.Player
             }
         }
 
-        public void StopMoving()
+        /// <summary>
+        /// Coroutine for managing the rod animation wait time,
+        /// also known as the window where the player cannot move.
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator RodAnimRoutine()
+        {
+            yield return new WaitForSeconds(_rodAnimTime);
+            _inAnim = false;
+            _player.Anim.SetInteger("Direction", -1);
+            _player.Anim.SetTrigger("OnAnimFinish");
+        }
+
+        public void StopMoving(bool playAnim = true)
         {
             _movement.SetVelocity(Vector3.zero);
             
+            if (!playAnim)
+            {
+                return;
+            }
+
             // Stop movement anim
             _player.Anim.SetTrigger("onStopMoving");
         }
