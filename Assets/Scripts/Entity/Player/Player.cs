@@ -5,9 +5,6 @@ namespace Magicat.Entity.Player
 {
     public class Player : Entity
     {
-        [SerializeField]
-        private GameObject _rodObj;
-
         // TODO: readd playerdata structure. This is temp to test movement!!
         public float speed = 3.0f;
 
@@ -16,16 +13,21 @@ namespace Magicat.Entity.Player
 
         private SpriteRenderer _sprite;
         private Animator _anim;
+        private Rod _rod;
 
         private void Start()
         {
             _sprite = GetComponent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
+            _rod = GetComponentInChildren<Rod>();
         }
 
-        // TODO MOVE ROD LOGIC INTO ITS OWN CLASS?
+        // TODO: In the future we will have enemies copy abilities as their own classes
+        // so this function should dictate what we're using based on our current ability equips
+        // (e.g. base copy ability, use fireball, dash, etc.)
         public void UseRod(Directions dir)
         {
+            _rod.UseCopyAbility(dir);
         }
     }
 }
