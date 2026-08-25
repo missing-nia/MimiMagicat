@@ -1,0 +1,52 @@
+{
+  "Name": "stage2_untitled",
+  "LoopTimestampInBeats": 24.0,
+  "BPM": [
+    {
+      "BPM": 207.65,
+      "TimestampInBeats": 0.0
+    }
+  ],
+  "TimeSignature": [
+    {
+      "BeatsInAMeasure": 6.0,
+      "TimestampInBeats": 0.0
+    },
+    {
+      "BeatsInAMeasure": 5.0,
+      "TimestampInBeats": 174.0
+    },
+    {
+      "BeatsInAMeasure": 6.0,
+      "TimestampInBeats": 179.0
+    },
+    {
+      "BeatsInAMeasure": 5.0,
+      "TimestampInBeats": 197.0
+    },
+    {
+      "BeatsInAMeasure": 6.0,
+      "TimestampInBeats": 202.0
+    },
+    {
+      "BeatsInAMeasure": 5.0,
+      "TimestampInBeats": 316.0
+    },
+    {
+      "BeatsInAMeasure": 6.0,
+      "TimestampInBeats": 321.0
+    },
+    {
+      "BeatsInAMeasure": 5.0,
+      "TimestampInBeats": 381.0
+    },
+    {
+      "BeatsInAMeasure": 4.0,
+      "TimestampInBeats": 401.0
+    },
+    {
+      "BeatsInAMeasure": 6.0,
+      "TimestampInBeats": 417.0
+    }
+  ]
+}
