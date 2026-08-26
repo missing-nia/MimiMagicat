@@ -34,10 +34,13 @@ namespace Magicat.JSON.BGMJSON
         [JsonProperty("LoopTimestampInBeats")]
         public float LoopTimestampInBeats; // Exact beat timestamp for loop point of song
 
+        [JsonProperty("DurationInBeats")]
+        public float DurationInBeats;
+
         [JsonProperty("BPM")]
-        BPMData[] BPM; // Stores BPM values and their associated timestamps. Important for songs with changing BPMs
+        public BPMData[] BPM; // Stores BPM values and their associated timestamps. Important for songs with changing BPMs
 
         [JsonProperty("TimeSignature")]
-        TimeSignatureData[] TimeSignature; // Stores time signature values and their associated timestamps. Important for songs with varying time signatures.
+        public TimeSignatureData[] TimeSignature; // Stores time signature values and their associated timestamps. Important for songs with varying time signatures.
     }
 }

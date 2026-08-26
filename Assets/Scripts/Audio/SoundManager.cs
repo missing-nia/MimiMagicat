@@ -9,6 +9,7 @@ namespace Magicat.Audio
     public class SoundManager : MonoBehaviour
     {
         public const int CHANNEL_COUNT = 4;
+        public const int SECONDS_PER_MINUTE = 60; // kinda stupid but also clarifies what the number is lol
 
         [SerializeField]
         private AudioSource[] _channels = new AudioSource[CHANNEL_COUNT];
@@ -29,9 +30,13 @@ namespace Magicat.Audio
         private TextAsset _bgmJSON;
 
         private float _bgmTime; // Current time of the running bgm for audio clip swapping
+        private float _bgmDuration;
+        private float _bgmLoopTimestamp;
+
         private BGMData _bgmData;
 
         private bool _isBGMLoading; // Testing should handled this some other way maybe
+        private bool _isBGMPlaying;
 
         // Start is called before the first frame update
         private void Start()
@@ -66,13 +71,47 @@ namespace Magicat.Audio
                 PlayMusic();
                 _isBGMLoading = false;
             }
+
+            _bgmTime += Time.deltaTime;
+            if (_isBGMPlaying && _bgmTime > _bgmDuration)
+            {
+                // Time to loop
+                foreach (var channel in _channels)
+                {
+                    channel.time = _bgmLoopTimestamp;
+                }
+                _bgmTime = _bgmLoopTimestamp;
+            }
         }
 
-        private void FixedUpdate()
+        /// <summary>
+        /// Function for calculating the realtime timestamp for
+        /// song loops. Data is processed using BGM and beat count data
+        /// </summary>
+        private void CalculateLoopTimestamp()
         {
-            _bgmTime += Time.fixedDeltaTime;
+            _bgmLoopTimestamp = 0.0f;
+            // TODO: maybe consider doing calculations elsewhere for use in the other beat logic for AI
+            for(int i = 0; i < _bgmData.BPM.Length; ++i)
+            {
+                // 60 / BPM = number of seconds in each beat
+                float secondsPerBeat = SECONDS_PER_MINUTE / _bgmData.BPM[i].BPM;
 
-            // TODO: looping
+                // Special case if we're at the last bpm change
+                if (i + 1 == _bgmData.BPM.Length) 
+                {
+                    _bgmLoopTimestamp += secondsPerBeat * (_bgmData.LoopTimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
+                }
+                else if (_bgmData.LoopTimestampInBeats < _bgmData.BPM[i + 1].TimestampInBeats)
+                {
+                    _bgmLoopTimestamp += secondsPerBeat * (_bgmData.LoopTimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
+                }
+                else
+                {
+                    // Count to next timestamp
+                    _bgmLoopTimestamp += secondsPerBeat * (_bgmData.BPM[i + 1].TimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
+                }
+            }
         }
 
         private void UpdateVolume()
@@ -89,21 +128,29 @@ namespace Magicat.Audio
 
         public void PlayMusic()
         {
+            // Failsafe in case no audio clips
+            _bgmDuration = 0.0f;
+
             for (int i = 1; i <= CHANNEL_COUNT; ++i)
             {
                 SoundLoader.Instance.RetrieveSound(_bgmData.Name + ".ch" + i, _channels[i - 1]);
                 if (_channels[i - 1].clip != null)
                 {
                     _channels[i - 1].Play();
+                    _channels[i - 1].loop = true;
+                    _bgmDuration = _channels[i - 1].clip.length; 
                 }
             }
 
+            CalculateLoopTimestamp();
             _bgmTime = 0.0f; // TODO: check if this lines up right xd
+            _isBGMPlaying = true;
         }
 
         public void StopMusic()
         {
             // TODO
+            _isBGMPlaying = false;
         }
 
         public void SetVolume(SoundType soundType, int volume)
