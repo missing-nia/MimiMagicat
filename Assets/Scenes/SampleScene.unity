@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1650262147880434790, guid: 9fc6ecedabe9f994194f35174c63b598, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6636627194304533928, guid: 9fc6ecedabe9f994194f35174c63b598, type: 3}
       propertyPath: m_Radius
       value: 0.1
