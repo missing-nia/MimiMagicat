@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using Magicat.JSON;
 using Magicat.JSON.BGMJSON;
+using Magicat.Helpers;
 
 namespace Magicat.Audio
 {
@@ -10,6 +11,10 @@ namespace Magicat.Audio
     {
         public const int CHANNEL_COUNT = 4;
         public const int SECONDS_PER_MINUTE = 60; // kinda stupid but also clarifies what the number is lol
+
+        public static EventWrapper OnBeatBGM = new EventWrapper();
+        public static EventWrapper OnMeasureBGM = new EventWrapper();
+        public static EventWrapper OnTimeSignatureChanged = new EventWrapper();
 
         [SerializeField]
         private AudioSource[] _channels = new AudioSource[CHANNEL_COUNT];
@@ -34,6 +39,9 @@ namespace Magicat.Audio
         private float _bgmLoopTimestamp;
 
         private BGMData _bgmData;
+
+        private float[] _timeSignatureTimestamps;
+        private float[] _bpmTimestamps;
 
         private bool _isBGMLoading; // Testing should handled this some other way maybe
         private bool _isBGMPlaying;
@@ -84,6 +92,11 @@ namespace Magicat.Audio
             }
         }
 
+        private void FixedUpdate()
+        {
+            // Put beat changes in fixed timestamp to keep movements consistent
+        }
+
         /// <summary>
         /// Function for calculating the realtime timestamp for
         /// song loops. Data is processed using BGM and beat count data
@@ -105,11 +118,56 @@ namespace Magicat.Audio
                 else if (_bgmData.LoopTimestampInBeats < _bgmData.BPM[i + 1].TimestampInBeats)
                 {
                     _bgmLoopTimestamp += secondsPerBeat * (_bgmData.LoopTimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
+                    break;
                 }
                 else
                 {
                     // Count to next timestamp
                     _bgmLoopTimestamp += secondsPerBeat * (_bgmData.BPM[i + 1].TimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Calculates bpm and time signature timestamps for mathmatical calculations and event wrappers
+        /// </summary>
+        private void CalculateTimestamps()
+        {
+            // TODO: Test this shit idk
+            float currentTime = 0.0f;
+            float currentTimeInBeats = 0.0f;
+            int timeSignatureIDX = 0;
+            _bpmTimestamps = new float[_bgmData.BPM.Length];
+            _timeSignatureTimestamps = new float[_bgmData.TimeSignature.Length];
+            for (int i = 0; i < _bgmData.BPM.Length; ++i)
+            {
+                // 60 / BPM = number of seconds in each beat
+                float secondsPerBeat = SECONDS_PER_MINUTE / _bgmData.BPM[i].BPM;
+                bool isLastBPMChange = (i + 1 >= _bgmData.BPM.Length); // Check if there is another bpm change after our current timestamp
+                _bpmTimestamps[i] = currentTime;
+
+                float time = currentTime;
+                for (int j = timeSignatureIDX; j < _bgmData.TimeSignature.Length; ++j) 
+                {
+                    // Check if we've pasted the next BPM change timestamp
+                    if (!isLastBPMChange && _bgmData.TimeSignature[j].TimestampInBeats > _bgmData.BPM[i + 1].TimestampInBeats)
+                    {
+                        // We've passed it, so move on
+                        break;
+                    }
+
+                    time += secondsPerBeat * (_bgmData.TimeSignature[j].TimestampInBeats - currentTimeInBeats);
+                    _timeSignatureTimestamps[j] = time;
+
+                    currentTimeInBeats = _bgmData.TimeSignature[j].TimestampInBeats;
+                    ++timeSignatureIDX;
+                }
+
+                if (!isLastBPMChange)
+                {
+                    // Read to next bpm timestamp
+                    currentTime += secondsPerBeat * (_bgmData.BPM[i + 1].TimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
+                    currentTimeInBeats = _bgmData.BPM[i + 1].TimestampInBeats;
                 }
             }
         }
@@ -143,6 +201,7 @@ namespace Magicat.Audio
             }
 
             CalculateLoopTimestamp();
+            CalculateTimestamps();
             _bgmTime = 0.0f; // TODO: check if this lines up right xd
             _isBGMPlaying = true;
         }
