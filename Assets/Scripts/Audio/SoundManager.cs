@@ -4,6 +4,7 @@ using UnityEngine;
 using Magicat.JSON;
 using Magicat.JSON.BGMJSON;
 using Magicat.Helpers;
+using System.Collections;
 
 namespace Magicat.Audio
 {
@@ -12,9 +13,9 @@ namespace Magicat.Audio
         public const int CHANNEL_COUNT = 4;
         public const int SECONDS_PER_MINUTE = 60; // kinda stupid but also clarifies what the number is lol
 
-        public static EventWrapper OnBeatBGM = new EventWrapper();
-        public static EventWrapper OnMeasureBGM = new EventWrapper();
-        public static EventWrapper OnTimeSignatureChanged = new EventWrapper();
+        public static EventWrapper OnBeatBGM;
+        public static EventWrapper OnMeasureBGM;
+        public static EventWrapperWithMessage<float> OnTimeSignatureChanged;
 
         [SerializeField]
         private AudioSource[] _channels = new AudioSource[CHANNEL_COUNT];
@@ -34,14 +35,15 @@ namespace Magicat.Audio
         [SerializeField]
         private TextAsset _bgmJSON;
 
-        private float _bgmTime; // Current time of the running bgm for audio clip swapping
         private float _bgmDuration;
         private float _bgmLoopTimestamp;
 
-        private BGMData _bgmData;
+        private float[] _bpmSecondsPerBeat; // SPB of the various BPM values stored in BGMData
 
-        private float[] _timeSignatureTimestamps;
-        private float[] _bpmTimestamps;
+        private int _idxBPM;
+        private int _idxTimeSignature;
+
+        private BGMData _bgmData;
 
         private bool _isBGMLoading; // Testing should handled this some other way maybe
         private bool _isBGMPlaying;
@@ -68,6 +70,10 @@ namespace Magicat.Audio
                 // Cant set this until we separate the marriage of MainCamera and SoundManager :(
                 //DontDestroyOnLoad(gameObject);
                 _instance = this;
+
+                OnBeatBGM = new EventWrapper();
+                OnMeasureBGM = new EventWrapper();
+                OnTimeSignatureChanged = new EventWrapperWithMessage<float>();
             }
         }
 
@@ -80,21 +86,15 @@ namespace Magicat.Audio
                 _isBGMLoading = false;
             }
 
-            _bgmTime += Time.deltaTime;
-            if (_isBGMPlaying && _bgmTime > _bgmDuration)
+            if (_isBGMPlaying && _channels[0].time >= _bgmDuration)
             {
                 // Time to loop
                 foreach (var channel in _channels)
                 {
+                    // TODO: Check looping correctly xd
                     channel.time = _bgmLoopTimestamp;
                 }
-                _bgmTime = _bgmLoopTimestamp;
             }
-        }
-
-        private void FixedUpdate()
-        {
-            // Put beat changes in fixed timestamp to keep movements consistent
         }
 
         /// <summary>
@@ -128,47 +128,12 @@ namespace Magicat.Audio
             }
         }
 
-        /// <summary>
-        /// Calculates bpm and time signature timestamps for mathmatical calculations and event wrappers
-        /// </summary>
-        private void CalculateTimestamps()
+        private void CalculateBeatPerSecondValues()
         {
-            // TODO: Test this shit idk
-            float currentTime = 0.0f;
-            float currentTimeInBeats = 0.0f;
-            int timeSignatureIDX = 0;
-            _bpmTimestamps = new float[_bgmData.BPM.Length];
-            _timeSignatureTimestamps = new float[_bgmData.TimeSignature.Length];
+            _bpmSecondsPerBeat = new float[_bgmData.BPM.Length];
             for (int i = 0; i < _bgmData.BPM.Length; ++i)
             {
-                // 60 / BPM = number of seconds in each beat
-                float secondsPerBeat = SECONDS_PER_MINUTE / _bgmData.BPM[i].BPM;
-                bool isLastBPMChange = (i + 1 >= _bgmData.BPM.Length); // Check if there is another bpm change after our current timestamp
-                _bpmTimestamps[i] = currentTime;
-
-                float time = currentTime;
-                for (int j = timeSignatureIDX; j < _bgmData.TimeSignature.Length; ++j) 
-                {
-                    // Check if we've pasted the next BPM change timestamp
-                    if (!isLastBPMChange && _bgmData.TimeSignature[j].TimestampInBeats > _bgmData.BPM[i + 1].TimestampInBeats)
-                    {
-                        // We've passed it, so move on
-                        break;
-                    }
-
-                    time += secondsPerBeat * (_bgmData.TimeSignature[j].TimestampInBeats - currentTimeInBeats);
-                    _timeSignatureTimestamps[j] = time;
-
-                    currentTimeInBeats = _bgmData.TimeSignature[j].TimestampInBeats;
-                    ++timeSignatureIDX;
-                }
-
-                if (!isLastBPMChange)
-                {
-                    // Read to next bpm timestamp
-                    currentTime += secondsPerBeat * (_bgmData.BPM[i + 1].TimestampInBeats - _bgmData.BPM[i].TimestampInBeats);
-                    currentTimeInBeats = _bgmData.BPM[i + 1].TimestampInBeats;
-                }
+                _bpmSecondsPerBeat[i] = SECONDS_PER_MINUTE / _bgmData.BPM[i].BPM;
             }
         }
 
@@ -176,6 +141,54 @@ namespace Magicat.Audio
         {
             // Logarithmic math mumbo jumbo so we can change volume without actually changing values the vizualizer sees
             //_audioMixer.SetFloat("Master", Mathf.Log10(_masterVolume / 100.0f) * 20.0f);
+        }
+
+        private IEnumerator BeatsAndMeasuresEventRoutine()
+        {
+            float nextBeatTime = 0.0f; // Expected time of the next beat..
+            int beat = 0;
+            int curBeatofMeasure = 0;
+            _idxBPM = 0;
+            _idxTimeSignature = 0;
+            while (_isBGMPlaying)
+            {
+                // Has the BPM changed?
+                if (_idxBPM + 1 < _bgmData.BPM.Length && beat == _bgmData.BPM[_idxBPM + 1].TimestampInBeats)
+                {
+                    ++_idxBPM;
+                }
+
+                // Has the time signature changed?
+                if (_idxTimeSignature + 1 < _bgmData.TimeSignature.Length && beat == _bgmData.TimeSignature[_idxTimeSignature + 1].TimestampInBeats)
+                {
+                    // Let them know what the new time sig is...
+                    ++_idxTimeSignature;
+                    OnTimeSignatureChanged.Invoke(_bgmData.TimeSignature[_idxTimeSignature].BeatsInAMeasure);
+                    Debug.Log("Time signature changed: " + _bgmData.TimeSignature[_idxTimeSignature].BeatsInAMeasure);
+                }
+
+                // This only really works for equal integer value beats but im not gonna bother fixing it unless i need to in the future lmfao
+                nextBeatTime += _bpmSecondsPerBeat[_idxBPM];
+                yield return new WaitUntil(() => _channels[0].time >= nextBeatTime);
+                OnBeatBGM.Invoke(); // New beat
+                Debug.Log("Beat #" + beat + "! channelTime = " + _channels[0].time);
+                ++beat;
+                ++curBeatofMeasure;
+                if (curBeatofMeasure > _bgmData.TimeSignature[_idxTimeSignature].BeatsInAMeasure)
+                {
+                    // New measure
+                    OnMeasureBGM.Invoke();
+                    Debug.Log("New Measure");
+                    curBeatofMeasure = 1;
+                }
+
+                if (beat == _bgmData.DurationInBeats)
+                {
+                    beat = (int)_bgmData.LoopTimestampInBeats;
+                    curBeatofMeasure = 1;
+                    nextBeatTime = 0.0f;
+                }
+            }
         }
 
         public void PlaySoundEffect(string sound, float delay)
@@ -201,9 +214,10 @@ namespace Magicat.Audio
             }
 
             CalculateLoopTimestamp();
-            CalculateTimestamps();
-            _bgmTime = 0.0f; // TODO: check if this lines up right xd
+            CalculateBeatPerSecondValues();
             _isBGMPlaying = true;
+
+            StartCoroutine(BeatsAndMeasuresEventRoutine());
         }
 
         public void StopMusic()

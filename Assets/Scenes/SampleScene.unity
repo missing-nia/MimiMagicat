@@ -689,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 1278946809683087505, guid: 99685b077b96afb40aaa569cf359091b, type: 3}
       propertyPath: _bgmJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 820399cbc190d5a4fac3ff0b70f7fb0e, type: 3}
+      objectReference: {fileID: 4900000, guid: 9ba3acdd1df33ec4b894020dd276b5e4, type: 3}
     - target: {fileID: 1278946809683087505, guid: 99685b077b96afb40aaa569cf359091b, type: 3}
       propertyPath: '_channels.Array.data[0]'
       value: 
